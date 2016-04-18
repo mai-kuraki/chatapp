@@ -1,0 +1,35 @@
+<div class="wrap gray-bg">
+      <checkloginstatus></checkloginstatus>
+      <div class="action-bar" ng-controller="actionBarCtrl">
+            <a ui-sref="/" class='bak-icon font-ico'>&#xe408;</a>
+            <span class="chat-title">好友列表</span>
+            <a href="javascript:void(0);" class='menu-icon font-ico' ng-click="menuShow()">&#xe5d2;</a>
+            <div class="top-option">
+            	<div><a ui-sref="addFriend">加好友</a></div>
+            	<div class="b-t">扫一扫</div>
+            </div>
+            <div class="menu-mask" ng-click="menuHide()"></div>
+      </div>
+      <ul class="userItems userMsgItem b-t-b" ng-controller="userListCtrl" style="display:none;" ng-init="getUserList()">
+            <li class="clearfix b-t" ng-repeat="item in userListData" data-id="{{ item._id }}" ng-click="toChat(this)">
+                  <img ng-src="{{ item.userHead }}" class="list-userhead">
+                  <span ng-bind="item.userName"></span>
+                  <em class="msg-ico" ng-if="item.unRead > 0">{{ item.unRead }}</em>
+            </li>
+      </ul>
+      <u class="foot-nav b-t clearfix">
+            <a ui-sref="chat"><li>
+                  <i class="font-ico">&#xe0ca;</i>
+                  <span>消息</span>
+            </li></a>
+            <a ui-sref="userList"><li class="cur-page">
+                  <i class="font-ico">&#xe902;</i>
+                  <span>好友</span>
+            </li></a>
+            <a ui-sref="user"><li>
+                  <i class="font-ico">&#xe904;</i>
+                  <span>我</span>
+            </li></a>
+      </u>
+</div>
+

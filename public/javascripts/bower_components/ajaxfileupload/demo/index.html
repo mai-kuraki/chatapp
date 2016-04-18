@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ajaxfileupload</title>
+
+    </head>
+
+    <body>
+        <div>
+            <h5><span class="tit">商户LOGO：</span>
+                <img id="preview" style="width:80px;height:80px"  alt="上传头像">
+                <span><input type="file" name="file" id="file" onchange="setImagePreview()"></span>
+                <input type="button" onclick="ajaxFileUpload();" value="上传">
+            </h5>
+            
+        </div>
+    </body>
+    
+     <script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="../ajaxfileupload.js"></script>
+	<script type="text/javascript">
+
+		 <!--==========图片预览~=====================================================================-->
+     
+        function setImagePreview(){
+            var docObj=document.getElementById("file");
+            var fileSize = docObj.files[0].size;
+            var size = fileSize/1024;
+            if(!/\.(gif|jpg|jpeg|png|GIF|JPG|PNG)$/.test(docObj.value)){
+                alert("图片类型必须是.gif,jpeg,jpg,png中的一种");
+                docObj.outerHTML = docObj.outerHTML;
+                return false;
+            }
+            if(size>100){
+                alert("头像大小不能超过100kb");
+                docObj.outerHTML = docObj.outerHTML;
+                return false;
+            }
+            var imgObjPreview=document.getElementById("preview");
+            if(docObj.files && docObj.files[0])
+            {
+                imgObjPreview.style.display = 'block';
+                imgObjPreview.style.width = '80px';
+                imgObjPreview.style.height = '80px';
+                imgObjPreview.src = window.URL.createObjectURL(docObj.files[0]);
+            }
+            else
+            {
+                docObj.select();
+                var imgSrc = document.selection.createRange().text;
+                var localImagId = document.getElementById("localImag");
+                localImagId.style.width = "80px";
+                localImagId.style.height = "80px";
+                try{
+                    localImagId.style.filter="progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)";
+                    localImagId.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = imgSrc;
+                }
+                catch(e)
+                {
+                    alert("您上传的图片格式不正确，请重新选择!");
+                    return false;
+                }
+                imgObjPreview.style.display = 'none';
+                document.selection.empty();
+            }
+            return true;
+        };
+
+
+
+
+        //上传图片
+
+        function ajaxFileUpload() {
+            $.ajaxFileUpload({
+                url: '/api/user',  //请求路径
+                type: 'post',    //请求方式
+                secureuri: false, //是否需要安全协议，一般设置为false
+                fileElementId: 'file', // 上传文件的id、name属性名
+                dataType: 'JsonResult', //返回值类型，一般设置为json、application/json
+                data:"data",//一同上传的数据（可以上传JSON对象）
+                success: function(data, status){
+                    console.log("success:"+data);
+                },
+                error: function(data, status, e){
+                    console.log("failed:"+data)
+                }
+            });
+        }
+      
+
+	</script>
+
+</html>

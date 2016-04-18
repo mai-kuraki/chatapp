@@ -1,0 +1,39 @@
+<div class="wrap" ng-controller="chatCtrl">
+	<checkloginstatus></checkloginstatus>
+    <div class="action-bar">
+      <a ui-sref="userList" class='bak-icon font-ico'>&#xe408;</a>
+      <span class="chat-title">{{ friendName }}</span>
+      <a href="javascript:void(0);" class='menu-icon font-ico'>&#xe5d2;</a>
+    </div>
+    <div class="content-window" id="wrapper" ng-controller="chatItemCtrl">
+    	<div id="scroller" ng-init="initScroll()">
+			<ul class="chat-item">
+				<!-- <li class="left-item clearfix">
+					<div class="user-head-pic"><img src="http://img.woyaogexing.com/2016/03/21/18f9c9fb74258bb2!200x200.jpg"></div>
+					<div class="chat-detail">
+						<div class="user-name clearfix"><span>cyrus</span></div>
+						<div class="chat-content">
+							另外，对于windows用户，还需要装msysgit，如下图。注意图二中的那个选项
+						</div>
+					</div>
+				</li>
+				<li class="c-time"><time>11:40</time></li>
+				<li class="right-item clearfix">
+					<div class="user-head-pic"><img src="http://img.woyaogexing.com/2016/03/21/f9966ea388a9e878!200x200.jpg"></div>
+					<div class="chat-detail">
+						<div class="user-name clearfix"><span>cyrus</span></div>
+						<div class="chat-content">
+							bower解决js的依赖管理 | 粉丝日志
+						</div>
+					</div>
+				</li> -->
+			</ul>
+		</div>
+    </div>
+    <div class="input-area" ng-controller="sendCtrl">
+      <div class="i-a-wrap">
+        <div class="edit-area" contenteditable="true" ng-model="messageContent"></div>
+        <div class="send-btn" ng-click="send()">发送</div>
+      </div>
+    </div>
+</div>

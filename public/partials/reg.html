@@ -1,0 +1,19 @@
+<div class="wrap red-bg">
+	<div class="login-box" ng-controller="regCtrl">
+		<h3>REGIST</h3>
+		<form action="/doReg" method="post">
+			<div class="input-line clearfix">
+				<input type="text" name="userName" placeHolder="用户名" ng-model="userName">
+			</div>
+			<div class="input-line clearfix">
+				<input type="password" name="pwd1" placeHolder="密码" ng-model="pwd1">
+			</div>
+			<div class="input-line clearfix">
+				<input type="password" name="pwd2" placeHolder="确认密码" ng-model="pwd2">
+			</div>
+			<a href="javascript:void(0)" class="btn" ng-click="reg()">注册</a>
+			<a ui-sref="login" class="btn" ng-click="reg()">已有账号，去登陆</a>
+		</form>
+	</div>
+</div>
+

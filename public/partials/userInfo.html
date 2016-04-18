@@ -1,0 +1,39 @@
+<div class="wrap gray-bg" ng-controller="friendInfoCtrl">
+	<checkloginstatus></checkloginstatus>
+	<div class="action-bar">
+      <a ui-sref="userList" class='bak-icon font-ico'>&#xe408;</a>
+      <span class="chat-title">用户</span>
+      <a href="javascript:void(0);" class='menu-icon font-ico'>&#xe5d2;</a>
+    </div>
+	<ul class="userifo-item">
+		<li class="user-info head-info clearfix">
+			<span class="info-label">头像</span>
+			<div class="info-val userinfo-head-preview">
+				<img class="userinfo-head" src="">
+			</div>
+		</li>
+		<li class="user-info clearfix b-t">
+			<span class="info-label">昵称</span>
+			<div class="info-val niki-name"></div>
+		</li>
+		<li class="user-info clearfix b-t">
+			<span class="info-label">ID</span>
+			<div class="info-val userId"></div>
+		</li>
+	</ul>
+	<ul class="userifo-item">
+		<li class="user-info clearfix">
+			<span class="info-label">性别</span>
+			<div class="info-val">男</div>
+		</li>
+		<li class="user-info clearfix b-t">
+			<span class="info-label">地区</span>
+			<div class="info-val">北京市</div>
+		</li>
+	</ul>
+	<ul class="user-action b-t clearfix">
+		<li><a href="javascript:void(0);" class="to-chat" ng-click="toChat()">发送信息</a></li>
+		<li><a href="javascript:void(0);" class="to-friend" ng-click="toFriend()">加为好友</a></li>
+	</ul>
+</div>
+

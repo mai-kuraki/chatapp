@@ -1,0 +1,68 @@
+<div class="wrap gray-bg" ng-controller="userCtrl">
+	<checkloginstatus></checkloginstatus>
+	<div class="action-bar" ng-controller="actionBarCtrl">
+        <a ui-sref="/" class='bak-icon font-ico'>&#xe408;</a>
+        <span class="chat-title">个人中心</span>
+        <a href="javascript:void(0);" class='menu-icon font-ico' ng-click="menuShow()">&#xe5d2;</a>
+        <div class="top-option">
+        	<div><a ui-sref="addFriend">加好友</a></div>
+        	<div class="b-t">扫一扫</div>
+        </div>
+        <div class="menu-mask" ng-click="menuHide()"></div>
+  	</div>
+	<ul class="userifo-item">
+		<li class="user-info head-info clearfix" ng-init="iniUserCenter()" onclick="document.getElementById('headfile').click()">
+			<span class="info-label">头像</span>
+			<div class="info-val userinfo-head-preview">
+				<div class="wating-tip font-ico">
+					<em class="loading">&#xe105;</em>
+					<span>上传中</span>
+				</div>
+				<img class="userinfo-head" src="">
+				<input type="file" name="userHead" id="headfile">
+			</div>
+		</li>
+		<li class="user-info clearfix b-t">
+			<span class="info-label">昵称</span>
+			<div class="info-val niki-name"></div>
+		</li>
+		<li class="user-info clearfix b-t">
+			<span class="info-label">ID</span>
+			<div class="info-val userId"></div>
+		</li>
+	</ul>
+	<ul class="userifo-item">
+		<li class="user-info clearfix">
+			<span class="info-label">性别</span>
+			<div class="info-val">男</div>
+		</li>
+		<li class="user-info clearfix b-t">
+			<span class="info-label">地区</span>
+			<div class="info-val">北京市</div>
+		</li>
+	</ul>
+	<ul class="userifo-item">
+		<li class="user-info clearfix" ng-click="loginOut()">
+			<div class="loginout-btn">退出</div>
+		</li>
+	</ul>
+	<!-- <form action="/uploadUserHead" method="post" enctype="multipart/form-data">
+	<input type="file" name="userHead" id="headfile" style="display:block">
+	<input type="submit"> -->
+<!-- </form> -->
+	<u class="foot-nav b-t clearfix">
+            <a ui-sref="chat"><li>
+                  <i class="font-ico">&#xe0ca;</i>
+                  <span>消息</span>
+            </li></a>
+            <a ui-sref="userList"><li>
+                  <i class="font-ico">&#xe902;</i>
+                  <span>好友</span>
+            </li></a>
+            <a ui-sref="user"><li class="cur-page">
+                  <i class="font-ico">&#xe904;</i>
+                  <span>我</span>
+            </li></a>
+      </u>
+</div>
+

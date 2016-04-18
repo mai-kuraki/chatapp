@@ -1,0 +1,14 @@
+<div class="wrap gray-bg" ng-controller="searchUserCtrl">
+	<checkloginstatus></checkloginstatus>
+	<div class="action-bar">
+      <a ui-sref="/" class='bak-icon font-ico'>&#xe408;</a>
+      <span class="search-area"><input type="text" placeHolder="用户名" ng-model="searchVal"></span>
+      <a href="javascript:void(0);" class='menu-icon font-ico search-ico' ng-click="toSearch()">&#xe036;</a>
+    </div>
+	<ul class="userItems b-t-b" style="display:none;">
+		<li class="clearfix b-t" ng-repeat="item in searchUserData" ng-click="toUser(this)">
+			<img ng-src="{{ item.userHead }}" class="list-userhead">
+			<span ng-bind="item.userName"></span>
+		</li>
+	</ul>
+</div>

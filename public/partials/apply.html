@@ -1,0 +1,17 @@
+<div class="wrap gray-bg" ng-controller="applyCtrl">
+	<checkloginstatus></checkloginstatus>
+	<div class="action-bar">
+      <a ui-sref="userList" class='bak-icon font-ico'>&#xe408;</a>
+      <span class="chat-title">身份验证</span>
+      <a href="javascript:void(0);" class='menu-icon font-ico' ng-click="sendApply()">&#xe900;</a>
+    </div>
+    <div class="apply-user-info clearfix">
+    	<img ng-src="{{ applyUserHead }}">
+    	<div class="apply-user-detail">
+    		<span>{{ applyUserName }}</span>
+    		<span>{{ applyUserId }}</span>
+    	</div>
+    </div>
+	<div class="apply-area" contenteditable="true" placeHolder="输入验证信息" ng-model="applyMsg">
+	</div>
+</div>

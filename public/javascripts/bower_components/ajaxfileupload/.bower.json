@@ -1,0 +1,41 @@
+{
+  "name": "ajaxfileupload",
+  "main": "ajaxfileupload.js",
+  "homepage": "https://github.com/Septemberwh/ajaxfileupload",
+  "authors": [
+    "Septemberwh <312939906@qq.com>"
+  ],
+  "description": "An asynchronous upload plugin for jquery.",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "file",
+    "upload",
+    "ajax",
+    "ajaxfileupload"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.1.4",
+    "ajaxfileupload": "*"
+  },
+  "version": "1.1.0",
+  "_release": "1.1.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.1.0",
+    "commit": "f3bbc08d3485271175f05e9a0ebfa76101b80d48"
+  },
+  "_source": "git://github.com/Septemberwh/ajaxfileupload.git",
+  "_target": "^1.1.0",
+  "_originalSource": "ajaxfileupload",
+  "_direct": true
+}
