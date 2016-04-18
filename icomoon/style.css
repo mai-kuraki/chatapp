@@ -1,0 +1,99 @@
+@font-face {
+    font-family: 'icomoon';
+    src:    url('fonts/icomoon.eot?8bx2ce');
+    src:    url('fonts/icomoon.eot?8bx2ce#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?8bx2ce') format('truetype'),
+        url('fonts/icomoon.woff?8bx2ce') format('woff'),
+        url('fonts/icomoon.svg?8bx2ce#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-iconfont-tongxunlu:before {
+    content: "\e902";
+}
+.icon-iconfont-send:before {
+    content: "\e900";
+}
+.icon-photo_camera:before {
+    content: "\e412";
+}
+.icon-chat_bubble:before {
+    content: "\e0ca";
+}
+.icon-navigate_before:before {
+    content: "\e408";
+}
+.icon-navigate_next:before {
+    content: "\e409";
+}
+.icon-close:before {
+    content: "\e5cd";
+}
+.icon-keyboard_arrow_down:before {
+    content: "\e313";
+}
+.icon-keyboard_arrow_left:before {
+    content: "\e314";
+}
+.icon-keyboard_arrow_right:before {
+    content: "\e315";
+}
+.icon-keyboard_arrow_up:before {
+    content: "\e316";
+}
+.icon-sync:before {
+    content: "\e627";
+}
+.icon-menu:before {
+    content: "\e5d2";
+}
+.icon-mode_comment:before {
+    content: "\e253";
+}
+.icon-notifications:before {
+    content: "\e7f4";
+}
+.icon-power_settings_new:before {
+    content: "\e8ac";
+}
+.icon-settings:before {
+    content: "\e8b8";
+}
+.icon-search:before {
+    content: "\e036";
+}
+.icon-loader:before {
+    content: "\e105";
+}
+.icon-bubble:before {
+    content: "\e903";
+}
+.icon-user:before {
+    content: "\e904";
+}
+.icon-users:before {
+    content: "\e905";
+}
+.icon-spinner6:before {
+    content: "\e906";
+}
+.icon-circle-right:before {
+    content: "\e901";
+}
+
