@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app='webapp'>
+  <head>
+    <title><%= title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <script src='/javascripts/bower_components/angular/angular.min.js'></script>
+    <script src='/javascripts/bower_components/jquery/dist/jquery.min.js'></script>
+    <script src='/javascripts/app.js'></script>
+    <script src='/javascripts/controllers/controller.js'></script>
+    <script src='/javascripts/directives/directive.js'></script>
+  </head>
+  <body>
+	<div class="wrap" ng-controller="ParentCtrl">
+		<div class="login-box" ng-controller="loginCtrl">
+			<h3>LOGIN</h3>
+			<form action="/doLogin" method="post">
+				<div class="input-line clearfix">
+					<input type="text" name="userName" placeHolder="用户名" ng-model="userName">
+				</div>
+				<div class="input-line clearfix">
+					<input type="password" name="pwd" placeHolder="密码" ng-model="pwd">
+				</div>
+				<a href="javascript:void(0)" class="btn" ng-click="login()">登陆</a>
+				<a href="/reg" class="btn">注册</a>
+				<!-- <input type="submit" value="登陆" class="btn"> -->
+			</form>
+		</div>
+		<popMsg ng-controller="msgCtrl"></popMsg>
+	</div>
+  </body>
+  <script type="text/javascript"></script>
+</html>

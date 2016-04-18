@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app='webapp'>
+  <head>
+    <title><%= title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <script src='/javascripts/bower_components/angular/angular.min.js'></script>
+    <script src='/javascripts/bower_components/jquery/dist/jquery.min.js'></script>
+    <script src='/javascripts/app.js'></script>
+    <script src='/javascripts/controllers/controller.js'></script>
+    <script src='/javascripts/directives/directive.js'></script>
+    <script src='/javascripts/socket.io-client/socket.io.js'></script>
+  </head>
+  <body>
+	<div class="wrap" ng-controller="ParentCtrl">
+    <div class="action-bar">
+      <a href="#" class='bak-icon'><</a>
+      <span>chat</span>
+      <a href="#"></a>
+    </div>
+    <div class="content-window">
+       <form action="http://127.0.0.1:7102/saveUserAsset" method="post">
+        <input type="text" name="timestamp">
+        <input type="text" name="brandName">
+        <input type="text" name="brandID">
+        <input type="text" name="totalUserDataAssetVolume">
+        <input type="text" name="totalUserCount">
+        <input type="text" name="totalCommentCount">
+        <input type="text" name="totalTransactionCount">
+        <input type="submit" value="提交"> 
+      </form>
+    </div>
+    <div class="input-area">
+      <div class="i-a-wrap">
+        <div class="edit-area" contenteditable="true"></div>
+        <div class="send-btn">发送</div>
+      </div>
+    </div>
+	</div>
+  </body>
+  <script>
+    var socket = io.connect('http://127.0.0.1:3000');
+    socket.on('news', function (data) {
+        console.log(data);
+        socket.emit('other event', { my: 'data' });
+    });
+  </script>
+</html>

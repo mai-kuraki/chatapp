@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app='webapp'>
+  <head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <script src='/javascripts/bower_components/angular/angular.min.js'></script>
+    <script src='/javascripts/bower_components/angular/angular-route.min.js'></script>
+    <script src='/javascripts/bower_components/jquery/dist/jquery.min.js'></script>
+    <script src='/javascripts/bower_components/iscroll/build/iscroll.js'></script>
+    <script src='/javascripts/app.js'></script>
+    <script src='/javascripts/controllers/controller.js'></script>
+    <script src='/javascripts/directives/directive.js'></script>
+    <script src='/javascripts/services/service.js'></script>
+    <script src='/javascripts/socket.io-client/socket.io.js'></script>
+  </head>
+  <body ng-controller="ParentCtrl">
+    <form action="http://192.168.18.128:7102/saveUserAsset" method="post">
+      <input type="text" name="jdDataAssetDistribute">
+      <!-- <input type="text" name="dataSource">
+      <input type="text" name="friendsCount">
+      <input type="text" name="profileImage">
+      <input type="text" name="location">
+      <input type="text" name="userUrl">
+      <input type="text" name="screenName">
+      <input type="text" name="profileImageUrl">
+      <input type="text" name="city">
+      <input type="text" name="id">
+      <input type="text" name="createAt">
+      <input type="text" name="collectTime">
+      <input type="text" name="description">
+      <input type="text" name="province">
+      <input type="text" name="gender">
+      <input type="text" name="followersCount">
+      <input type="text" name="statusesCount"> -->
+      <!-- <input type="text" name="userAddress">
+      <input type="text" name="userVipLevel">
+      <input type="text" name="userName"> -->
+      <input type="submit" value="提交">
+    </form>
+  </body>
+</html>

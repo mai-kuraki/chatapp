@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app='webapp'>
+  <head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <script src='/javascripts/bower_components/angular/angular.min.js'></script>
+    <script src='/javascripts/bower_components/angular-ui-router/release/angular-ui-router.min.js'></script>
+    <script src='/javascripts/bower_components/jquery/dist/jquery.min.js'></script>
+    <script src='/javascripts/bower_components/iscroll/build/iscroll.js'></script>
+    <script src='/javascripts/bower_components/ajaxfileupload/ajaxfileupload.js'></script>
+    <script src='/javascripts/app.js'></script>
+    <script src='/javascripts/controllers/controller.js'></script>
+    <script src='/javascripts/directives/directive.js'></script>
+    <script src='/javascripts/services/service.js'></script>
+    <script src='/javascripts/socket.io-client/socket.io.js'></script>
+  </head>
+  <body ng-controller="ParentCtrl" onClick="a()" id="aa">
+    <div  data-ui-view="" class="page-wrap"></div>
+    <popMsg ng-controller="msgCtrl"></popMsg>
+    <script>
+        var myScroll;
+        // var socket = io.connect('http://192.168.1.101:3000');
+        var socket = io.connect('http://192.168.18.121:3000');
+    </script>
+  </body>
+</html>

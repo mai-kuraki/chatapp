@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app='webapp'>
+  <head>
+    <title><%= title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <script src='/javascripts/bower_components/angular/angular.min.js'></script>
+    <script src='/javascripts/bower_components/jquery/dist/jquery.min.js'></script>
+    <script src='/javascripts/app.js'></script>
+    <script src='/javascripts/controllers/controller.js'></script>
+    <script src='/javascripts/directives/directive.js'></script>
+    <script src='/javascripts/socket.io-client/socket.io.js'></script>
+  </head>
+  <body>
+	<div class="wrap" ng-controller="ParentCtrl">
+		<div class="login-box" ng-controller="homeCtrl">
+			<h3>wellcome</h3>
+      <p class="text"><%= userName %></p>
+      <a href="/chat" class="btn">进入聊天室</a>
+      <a href="javascript:void(0)" class="btn" ng-click="loginOut()">退出登陆</a>
+		</div>
+	</div>
+  </body>
+</html>

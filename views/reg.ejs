@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app='webapp'>
+  <head>
+    <title>注册</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <script src='/javascripts/bower_components/angular/angular.min.js'></script>
+    <script src='/javascripts/bower_components/jquery/dist/jquery.min.js'></script>
+    <script src='/javascripts/app.js'></script>
+    <script src='/javascripts/controllers/controller.js'></script>
+    <script src='/javascripts/directives/directive.js'></script>
+  </head>
+  <body>
+	<div class="wrap" ng-controller="ParentCtrl">
+		<div class="login-box" ng-controller="regCtrl">
+			<h3>REGIST</h3>
+			<form action="/doReg" method="post">
+				<div class="input-line clearfix">
+					<input type="text" name="userName" placeHolder="用户名" ng-model="userName">
+				</div>
+				<div class="input-line clearfix">
+					<input type="password" name="pwd1" placeHolder="密码" ng-model="pwd1">
+				</div>
+				<div class="input-line clearfix">
+					<input type="password" name="pwd2" placeHolder="确认密码" ng-model="pwd2">
+				</div>
+				<a href="javascript:void(0)" class="btn" ng-click="reg()">注册</a>
+				<a href="/" class="btn" ng-click="reg()">已有账号，去登陆</a>
+				<!-- <input type="submit" value="注册" class="btn"> -->
+			</form>
+		</div>
+		<popMsg ng-controller="msgCtrl"></popMsg>
+	</div>
+  </body>
+</html>
